@@ -1,0 +1,41 @@
+<testsuite name="command_line_case.To check the command line data" tests="1" errors="1" failures="0" skipped="0" time="0.001122" timestamp="2023-12-20T10:30:51.596128" hostname="abyrraju-mac"><testcase classname="command_line_case.To check the command line data" name="Command line data check" status="failed" time="0.001122"><error type="MissingSchema" message="Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?">
+<![CDATA[
+Failing step: When the user perform the get operation ... failed in 0.001s
+Location: command_line_case.feature:5
+Traceback (most recent call last):
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/behave/model.py", line 1329, in run
+    match.run(runner.context)
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/behave/matchers.py", line 98, in run
+    self.func(context, *args, **kwargs)
+  File "steps/commandline_code_steps.py", line 12, in get
+    context.resp = requests.get(url=context.base_url)
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/api.py", line 73, in get
+    return request("get", url, params=params, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/api.py", line 59, in request
+    return session.request(method=method, url=url, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/sessions.py", line 575, in request
+    prep = self.prepare_request(req)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/sessions.py", line 486, in prepare_request
+    p.prepare(
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/models.py", line 368, in prepare
+    self.prepare_url(url, params)
+  File "/Users/byrrajuanjaneyulu/PycharmProjects/BDD_API_Automation_Test/venv/lib/python3.11/site-packages/requests/models.py", line 439, in prepare_url
+    raise MissingSchema(
+requests.exceptions.MissingSchema: Invalid URL 'None': No scheme supplied. Perhaps you meant https://None?
+]]>
+</error><system-out>
+<![CDATA[
+@scenario.begin
+  Scenario: Command line data check
+    Given the user get the base url from command line ... passed in 0.000s
+    When the user perform the get operation ... failed in 0.001s
+    Then the user response status should be 200 ... skipped in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

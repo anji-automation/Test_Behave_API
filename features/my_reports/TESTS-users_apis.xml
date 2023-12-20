@@ -1,0 +1,60 @@
+<testsuite name="users_apis.Users API cases using POM model" tests="4" errors="0" failures="0" skipped="0" time="1.893778" timestamp="2023-12-20T10:30:53.507538" hostname="abyrraju-mac"><testcase classname="users_apis.Users API cases using POM model" name="Get the users details" status="passed" time="0.15745"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @smoke
+  Scenario: Get the users details
+    Given the user gather the end url 'https://reqres.in/api/users' ... passed in 0.000s
+    When the user send the API Get request ... passed in 0.157s
+    Then api response status code should be 200 ... passed in 0.000s
+    And the user api response text contains '12' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="users_apis.Users API cases using POM model" name="Create the users record" status="passed" time="0.585201"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @test2
+  Scenario: Create the users record
+    Given the user gather the end url 'https://reqres.in/api/users?page=2' ... passed in 0.000s
+    When the user pass the below data to send POST API ... passed in 0.585s
+      | name     | job    |
+      | morpheus | leader |
+    Then api response status code should be 201 ... passed in 0.000s
+    And the user api response text contains 'morpheus' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="users_apis.Users API cases using POM model" name="Update the users record-PUT" status="passed" time="0.565996"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @test3
+  Scenario: Update the users record-PUT
+    Given the user gather the end url 'https://reqres.in/api/users/2' ... passed in 0.000s
+    When the user pass the below data to send PUT API ... passed in 0.565s
+      | updated_name | updated_job |
+      | ram          | automation  |
+    Then api response status code should be 200 ... passed in 0.000s
+    And the user api response text contains 'ram' ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase><testcase classname="users_apis.Users API cases using POM model" name="Delete the user record" status="passed" time="0.585131"><system-out>
+<![CDATA[
+@scenario.begin
+
+  @test4
+  Scenario: Delete the user record
+    Given the user gather the end url 'https://reqres.in/api/users/20' ... passed in 0.000s
+    When the user send the delete api request ... passed in 0.585s
+    Then api response status code should be 204 ... passed in 0.000s
+
+@scenario.end
+--------------------------------------------------------------------------------
+]]>
+</system-out></testcase></testsuite>

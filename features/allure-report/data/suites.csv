@@ -1,0 +1,5 @@
+"Status","Start Time","Stop Time","Duration in ms","Parent Suite","Suite","Sub Suite","Test Class","Test Method","Name","Description"
+"passed","Wed Dec 20 10:17:45 IST 2023","Wed Dec 20 10:17:45 IST 2023","528","","","","","","Update the users record-PUT",""
+"passed","Wed Dec 20 10:17:45 IST 2023","Wed Dec 20 10:17:46 IST 2023","524","","","","","","Delete the user record",""
+"passed","Wed Dec 20 10:17:44 IST 2023","Wed Dec 20 10:17:44 IST 2023","171","","","","","","Get the users details",""
+"passed","Wed Dec 20 10:17:44 IST 2023","Wed Dec 20 10:17:45 IST 2023","548","","","","","","Create the users record",""
